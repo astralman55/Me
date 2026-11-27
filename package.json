@@ -1,0 +1,9 @@
+{
+  "name": "andylowry.com",
+  "private": true,
+  "type": "module",
+  "description": "Personal site. Plain HTML + one serverless function.",
+  "scripts": {
+    "dev": "npx vercel dev"
+  }
+}

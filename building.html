@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building — Andy Lowry</title>
+<meta name="description" content="Small, boring, reliable tools Andy Lowry builds to run a wine business.">
+<link rel="canonical" href="https://andylowry.com/building">
+<meta property="og:title" content="Building — Andy Lowry">
+<meta property="og:description" content="Small, boring, reliable tools Andy Lowry builds to run a wine business.">
+<meta property="og:url" content="https://andylowry.com/building">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site-head">
+  <a class="brand" href="/" aria-label="Andy Lowry — home"><span class="prompt">~/</span>andy-lowry<span class="cursor" aria-hidden="true"></span></a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="/writing">writing</a>
+    <a href="/reading">reading</a>
+    <a href="/building" aria-current="page">building</a>
+    <a href="/buying">buying</a>
+    <a href="/trashing">trashing</a>
+    <a class="sub" href="/subscribe">subscribe &rarr;</a>
+  </nav>
+</header>
+<main>
+<span class="label">// building</span>
+<h1>Building</h1>
+<p class="muted">Small tools, each with one job. Most of them exist so a human never has to retype a number.</p>
+<ul class="list">
+  <li><span class="k">in use</span><span class="v"><strong>Invoice intake</strong><span class="note">Photo of a distributor invoice in, received inventory out. Checks every line&rsquo;s cost against bottle price plus deposit, and flags anything that doesn&rsquo;t add up.</span></span></li>
+  <li><span class="k">in use</span><span class="v"><strong>Product launch pipeline</strong><span class="note">Turns an importer price sheet into finished store listings: house-format descriptions, every metadata field filled, nothing left as &ldquo;TBD.&rdquo;</span></span></li>
+  <li><span class="k">weekly</span><span class="v"><strong>Catalog QA</strong><span class="note">An audit that walks the whole catalog looking for missing data and drift from the house style. The linter for a wine shop.</span></span></li>
+  <li><span class="k">weekly</span><span class="v"><strong>Newsletter builder</strong><span class="note">Builds each issue from a template with verified offers and a consistent voice. I edit; it assembles.</span></span></li>
+  <li><span class="k">ongoing</span><span class="v"><strong>Producer pages</strong><span class="note">A page per winery, in one consistent format. Who they are, where they farm, why we carry them.</span></span></li>
+  <li><span class="k">v1</span><span class="v"><strong>This website</strong><span class="note">Plain HTML, one stylesheet, one tiny serverless function for the newsletter. No framework.</span></span></li>
+</ul>
+
+<h2>Principles</h2>
+<pre><code>1. one job per tool
+2. clear input, clear output, a check at the end
+3. the store is the source of truth &mdash; not a spreadsheet
+4. if I dread it, automate it
+5. boring is a feature</code></pre>
+<section class="subscribe" aria-labelledby="sub-h">
+  <h2 id="sub-h">Get the newsletter</h2>
+  <p>Occasional notes on what I&rsquo;m writing, reading, building, buying and throwing away. Short. No spam. Unsubscribe in one click.</p>
+  <form class="js-subscribe" action="/api/subscribe" method="post">
+    <label for="email-building" class="hp">Email address</label>
+    <input id="email-building" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit">subscribe</button>
+  </form>
+  <p class="msg" role="status" aria-live="polite"></p>
+</section>
+</main>
+<footer class="site-foot">
+  <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
+  <span><a href="/rss.xml">rss</a> &middot; <a href="/subscribe">newsletter</a> &middot; plain html, no trackers</span>
+</footer>
+</div>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
