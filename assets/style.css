@@ -114,42 +114,34 @@ sup.yr { font-size: .6em; color: var(--muted); vertical-align: .6em; font-varian
 .statement a { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .1em; }
 .statement a:hover { color: var(--accent); }
 .hint { margin: 1.5rem 0 0; font-size: .875rem; color: var(--muted); }
-.tiles { /* pyramid: 3 / 2 / 1, built block by block on load */
-  --w: 26vw; --h: 15vw; --g: 6px;
-  position: absolute; z-index: 1;
-  width: calc(3 * var(--w) + 2 * var(--g)); height: calc(3 * var(--h) + 2 * var(--g));
-  left: 50%; margin-left: calc((3 * var(--w) + 2 * var(--g)) / -2); top: 1.25rem;
+.tiles { /* a loose pile, assembled block by block on load */
+  position: absolute; z-index: 1; width: 82vw; aspect-ratio: 4 / 3;
+  left: 50%; margin-left: -41vw; top: .5rem;
 }
 .tiles::after { /* ground line */
-  content: ""; position: absolute; left: -8%; right: -8%; bottom: -1px; height: 1px; background: #111;
-  transform-origin: left; animation: ground .6s ease-out both .1s;
+  content: ""; position: absolute; left: -1%; right: -6%; bottom: -1px; height: 1px; background: #111;
+  transform-origin: left; animation: ground .6s ease-out both .05s;
 }
 .tile {
-  position: absolute; display: block; width: var(--w); height: var(--h);
-  left: calc(var(--x) * (var(--w) + var(--g))); bottom: calc(var(--y) * (var(--h) + var(--g)));
-  animation: drop .75s cubic-bezier(.3, 0, .6, 1) both; animation-delay: var(--d);
-  transition: transform .3s;
+  position: absolute; display: block;
+  left: var(--l); bottom: var(--b); width: var(--w); height: var(--h); rotate: var(--r);
+  animation: drop .7s cubic-bezier(.3, 0, .6, 1) both; animation-delay: var(--d);
+  transition: transform .3s; box-shadow: 0 1px 0 rgba(0,0,0,.08);
 }
-.tile:hover { transform: translateY(-4px); }
-.tile-2 { --x: 0;   --y: 0; --d: .45s; }  /* building */
-.tile-4 { --x: 1;   --y: 0; --d: 1s; }    /* trashing */
-.tile-5 { --x: 2;   --y: 0; --d: 1.55s; } /* resume */
-.tile-1 { --x: .5;  --y: 1; --d: 2.1s; }  /* reading */
-.tile-3 { --x: 1.5; --y: 1; --d: 2.65s; } /* buying */
-.tile-0 { --x: 1;   --y: 2; --d: 3.2s; }  /* writing, capstone */
+a.tile:hover { transform: translateY(-4px); }
 @keyframes drop {
   0%   { translate: 0 -110vh; }
   72%  { translate: 0 0; }
-  84%  { translate: 0 -5%; }
+  84%  { translate: 0 -6%; }
   100% { translate: 0 0; }
 }
 @keyframes ground { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (min-width: 900px) {
   .statement { max-width: 21ch; }
-  .tiles { --w: 9.5vw; --h: 6.5vw; --g: 8px; left: auto; margin-left: 0; top: auto; right: 5%; bottom: 18%; }
+  .tiles { width: 33vw; left: auto; margin-left: 0; top: auto; right: 5%; bottom: 16%; }
 }
 @media (max-width: 899px) and (max-height: 720px) {
-  .tiles { --w: 21vw; --h: 10.5vw; --g: 5px; top: .9rem; }
+  .tiles { width: 62vw; margin-left: -31vw; top: .4rem; }
   .statement { font-size: 1.6rem; }
 }
 @media (prefers-reduced-motion: reduce) {
