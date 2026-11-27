@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Building — Andy Lowry</title>
-<meta name="description" content="Small, boring, reliable tools Andy Lowry builds to run a wine business.">
+<title>Building · Andy Lowry</title>
+<meta name="description" content="The small tools Andy Lowry builds to run a wine shop.">
 <link rel="canonical" href="https://andylowry.com/building">
-<meta property="og:title" content="Building — Andy Lowry">
-<meta property="og:description" content="Small, boring, reliable tools Andy Lowry builds to run a wine business.">
+<meta property="og:title" content="Building · Andy Lowry">
+<meta property="og:description" content="The small tools Andy Lowry builds to run a wine shop.">
 <meta property="og:url" content="https://andylowry.com/building">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
@@ -19,7 +19,7 @@
 <body>
 <div class="wrap">
 <header class="site-head">
-  <a class="brand" href="/" aria-label="Andy Lowry — home"><span class="prompt">~/</span>andy-lowry<span class="cursor" aria-hidden="true"></span></a>
+  <a class="brand" href="/" aria-label="Andy Lowry, home"><span class="prompt">~/</span>andy-lowry<span class="cursor" aria-hidden="true"></span></a>
   <nav class="tabs" aria-label="Sections">
     <a href="/writing">writing</a>
     <a href="/reading">reading</a>
@@ -33,26 +33,26 @@
 <main>
 <span class="label">// building</span>
 <h1>Building</h1>
-<p class="muted">A business, and the small tools that keep it running. Each tool has one job, and most of them exist so a human never has to retype a number.</p>
+<p class="muted">The shop, and the small tools that keep it running. Each tool does one job, and most of them exist so nobody has to retype a number.</p>
 <ul class="list">
-  <li><span class="k">since 2023</span><span class="v"><strong>Harvest Wine Shop</strong><span class="note">The business itself. An independent wine shop I founded and run: buying, licensing, retail, marketing, and the software that ties it together. Everything below exists to serve it.</span></span></li>
-  <li><span class="k">in use</span><span class="v"><strong>Invoice intake</strong><span class="note">Photo of a distributor invoice in, received inventory out. Checks every line&rsquo;s cost against bottle price plus deposit, and flags anything that doesn&rsquo;t add up.</span></span></li>
-  <li><span class="k">in use</span><span class="v"><strong>Product launch pipeline</strong><span class="note">Turns an importer price sheet into finished store listings: house-format descriptions, every metadata field filled, nothing left as &ldquo;TBD.&rdquo;</span></span></li>
-  <li><span class="k">weekly</span><span class="v"><strong>Catalog QA</strong><span class="note">An audit that walks the whole catalog looking for missing data and drift from the house style. The linter for a wine shop.</span></span></li>
-  <li><span class="k">weekly</span><span class="v"><strong>Newsletter builder</strong><span class="note">Builds each issue from a template with verified offers and a consistent voice. I edit; it assembles.</span></span></li>
-  <li><span class="k">ongoing</span><span class="v"><strong>Producer pages</strong><span class="note">A page per winery, in one consistent format. Who they are, where they farm, why we carry them.</span></span></li>
-  <li><span class="k">v1</span><span class="v"><strong>This website</strong><span class="note">Plain HTML, one stylesheet, one tiny serverless function for the newsletter. No framework.</span></span></li>
+  <li><span class="k">since 2023</span><span class="v"><strong>Harvest Wine Shop</strong><span class="note">An independent wine shop I founded and run. I handle the buying, licensing, retail and marketing, and I built the tools below to support it.</span></span></li>
+  <li><span class="k">in use</span><span class="v"><strong>Invoice intake</strong><span class="note">I take a photo of a distributor invoice and it receives the wine into inventory. It checks each line's cost against the bottle price plus deposit and flags anything that doesn't add up.</span></span></li>
+  <li><span class="k">in use</span><span class="v"><strong>Product launch pipeline</strong><span class="note">Turns an importer's price sheet into finished store listings, with descriptions in the house format and every data field filled in.</span></span></li>
+  <li><span class="k">weekly</span><span class="v"><strong>Catalog QA</strong><span class="note">Walks the whole catalog looking for missing data and listings that have drifted from the house style. It's a linter for a wine shop.</span></span></li>
+  <li><span class="k">weekly</span><span class="v"><strong>Newsletter builder</strong><span class="note">Assembles each issue from a template, with every offer checked against the store. I do the editing.</span></span></li>
+  <li><span class="k">ongoing</span><span class="v"><strong>Producer pages</strong><span class="note">One page per winery in a consistent format: who they are, where they farm and why we carry them.</span></span></li>
+  <li><span class="k">v1</span><span class="v"><strong>This website</strong><span class="note">Plain HTML, one stylesheet and a small serverless function for the newsletter signup. No framework.</span></span></li>
 </ul>
 
 <h2>Principles</h2>
 <pre><code>1. one job per tool
 2. clear input, clear output, a check at the end
-3. the store is the source of truth &mdash; not a spreadsheet
+3. the store is the source of truth, not a spreadsheet
 4. if I dread it, automate it
 5. boring is a feature</code></pre>
 <section class="subscribe" aria-labelledby="sub-h">
   <h2 id="sub-h">Get the newsletter</h2>
-  <p>Occasional notes on what I&rsquo;m writing, reading, building, buying and throwing away. Short. No spam. Unsubscribe in one click.</p>
+  <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
   <form class="js-subscribe" action="/api/subscribe" method="post">
     <label for="email-building" class="hp">Email address</label>
     <input id="email-building" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
