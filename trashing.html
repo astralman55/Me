@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Trashing · Andy Lowry</title>
 <meta name="description" content="Things, tools and habits Andy Lowry has thrown away.">
 <link rel="canonical" href="https://andylowry.com/trashing">
@@ -10,31 +10,52 @@
 <meta property="og:description" content="Things, tools and habits Andy Lowry has thrown away.">
 <meta property="og:url" content="https://andylowry.com/trashing">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
-<div class="wrap">
-<header class="site-head">
-  <a class="name" href="/">Andy Lowry</a>
-  <nav aria-label="Sections">
+<body class="sub">
+<header class="bar">
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <a class="bar-name" href="/">Andy Lowry</a>
+</header>
+<div class="menu" id="menu" hidden>
+  <nav class="menu-links" aria-label="Sections">
+    <a href="/">Home</a>
     <a href="/writing">Writing</a>
     <a href="/reading">Reading</a>
     <a href="/building">Building</a>
     <a href="/buying">Buying</a>
-    <a href="/trashing" aria-current="page">Trashing</a>
+    <a href="/trashing">Trashing</a>
     <a href="/resume">Resume</a>
-    <a class="sub" href="/subscribe">Subscribe</a>
+    <a href="/subscribe">Newsletter</a>
   </nav>
+  <div class="menu-cols">
+    <div>
+      <h2 class="label">About</h2>
+      <p>Andy Lowry is a civil engineer, sommelier and construction manager. He works as an owner's rep in heavy civil construction and runs Harvest Wine Shop.</p>
+    </div>
+    <div>
+      <h2 class="label">Credentials</h2>
+      <p>Project Management Professional <sup class="yr">2026</sup><br>Certified Construction Quality Manager <sup class="yr">2026</sup><br>Sommelier, Level 1, CMS <sup class="yr">2025</sup><br>Sommelier, Level 3, NWS <sup class="yr">2023</sup><br>B.S. Ocean Engineering, USNA <sup class="yr">2019</sup></p>
+    </div>
+    <div>
+      <h2 class="label">Elsewhere</h2>
+      <p><a href="https://www.linkedin.com/in/andrew-lowry-6830ba25a" target="_blank" rel="noopener">LinkedIn</a><br><a href="/subscribe">Newsletter</a><br><a href="/rss.xml">RSS</a></p>
+    </div>
+  </div>
+  <p class="menu-foot">Site built with AI. The words are mine. <a href="/colophon">How this was made</a></p>
+</div>
+<header class="hero bg-trashing t-light">
+  
+  <div class="panel-top"><span>Things I threw out</span><span>05</span></div>
+  <h1 class="big">Trashing</h1>
 </header>
-<main>
-<h1 class="page-title">Trashing</h1>
+<main class="page">
 <p class="lede">Things, tools and habits I've thrown out and don't miss.</p>
 <ul class="rows">
   <li><span class="what"><span class="t">Running the shop out of a spreadsheet</span><span class="note">Inventory lives in one system now, so every number is in one place.</span></span></li>
@@ -45,10 +66,11 @@
   <li><span class="what"><span class="t">Meetings without a decision</span><span class="note">If nothing changes afterward, it was a podcast.</span></span></li>
   <li><span class="what"><span class="t">"We'll fix it later"</span><span class="note">In my experience, later means never.</span></span></li>
 </ul>
-<section class="subscribe" aria-labelledby="sub-h-trashing">
-  <h2 class="label" id="sub-h-trashing">Newsletter</h2>
+
+<section class="sub-block">
+  <h2 class="label">Newsletter</h2>
   <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
-  <form class="js-subscribe" action="/api/subscribe" method="post">
+  <form class="js-subscribe sub-form" action="/api/subscribe" method="post">
     <label for="email-trashing" class="hp">Email address</label>
     <input id="email-trashing" type="email" name="email" placeholder="Email address" autocomplete="email" required>
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -60,9 +82,7 @@
 <footer class="site-foot">
   <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
   <span>Site built with AI. The words are mine. <a href="/colophon">How this was made</a></span>
-  <span><a href="/subscribe">Newsletter</a> &middot; <a href="/rss.xml">RSS</a></span>
 </footer>
-</div>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Andy Lowry</title>
 <meta name="description" content="Andy Lowry is a civil engineer, sommelier and construction manager.">
 <link rel="canonical" href="https://andylowry.com/">
@@ -10,80 +10,165 @@
 <meta property="og:description" content="Andy Lowry is a civil engineer, sommelier and construction manager.">
 <meta property="og:url" content="https://andylowry.com/">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
-<div class="wrap">
-<header class="site-head">
-  <a class="name" href="/">Andy Lowry</a>
-  <nav aria-label="Sections">
+<body class="home">
+<header class="bar">
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <a class="bar-name" href="/">Andy Lowry</a>
+</header>
+<div class="menu" id="menu" hidden>
+  <nav class="menu-links" aria-label="Sections">
+    <a href="/">Home</a>
     <a href="/writing">Writing</a>
     <a href="/reading">Reading</a>
     <a href="/building">Building</a>
     <a href="/buying">Buying</a>
     <a href="/trashing">Trashing</a>
     <a href="/resume">Resume</a>
-    <a class="sub" href="/subscribe">Subscribe</a>
+    <a href="/subscribe">Newsletter</a>
   </nav>
-</header>
-<main>
-<section class="hero">
-  <p class="statement">Andy Lowry is a civil engineer, sommelier and construction manager.</p>
-  <div class="prose">
-    <p>I studied ocean engineering at the Naval Academy and spent five years as a Surface Warfare Officer. These days I work for an international consulting firm as an owner's rep in heavy civil construction, and I run Harvest Wine Shop, which I founded in 2023.</p>
-    <p>The military taught me how to operate in unfamiliar environments, with unfamiliar people.</p>
-    <p>This site is where I keep notes on what I'm <a href="/writing">writing</a>, <a href="/reading">reading</a>, <a href="/building">building</a>, <a href="/buying">buying</a> and <a href="/trashing">throwing away</a>.</p>
+  <div class="menu-cols">
+    <div>
+      <h2 class="label">About</h2>
+      <p>Andy Lowry is a civil engineer, sommelier and construction manager. He works as an owner's rep in heavy civil construction and runs Harvest Wine Shop.</p>
+    </div>
+    <div>
+      <h2 class="label">Credentials</h2>
+      <p>Project Management Professional <sup class="yr">2026</sup><br>Certified Construction Quality Manager <sup class="yr">2026</sup><br>Sommelier, Level 1, CMS <sup class="yr">2025</sup><br>Sommelier, Level 3, NWS <sup class="yr">2023</sup><br>B.S. Ocean Engineering, USNA <sup class="yr">2019</sup></p>
+    </div>
+    <div>
+      <h2 class="label">Elsewhere</h2>
+      <p><a href="https://www.linkedin.com/in/andrew-lowry-6830ba25a" target="_blank" rel="noopener">LinkedIn</a><br><a href="/subscribe">Newsletter</a><br><a href="/rss.xml">RSS</a></p>
+    </div>
+  </div>
+  <p class="menu-foot">Site built with AI. The words are mine. <a href="/colophon">How this was made</a></p>
+</div>
+<main class="deck">
+<section class="panel intro" id="top" aria-label="Introduction">
+  <div class="tiles" aria-hidden="false"><a class="tile tile-0 bg-writing" href="#writing" aria-label="Writing"></a><a class="tile tile-1 bg-reading" href="#reading" aria-label="Reading"></a><a class="tile tile-2 bg-building" href="#building" aria-label="Building"></a><a class="tile tile-3 bg-buying" href="#buying" aria-label="Buying"></a><a class="tile tile-4 bg-trashing" href="#trashing" aria-label="Trashing"></a><a class="tile tile-5 bg-resume" href="#resume" aria-label="Resume"></a></div>
+  <h1 class="statement">Andy Lowry is a civil engineer, sommelier and construction manager.</h1>
+  <p class="hint">Scroll</p>
+</section>
+<section class="panel bg-writing t-dark" id="writing" aria-label="Writing">
+  
+  <div class="panel-top"><span>Notes</span><span>01</span></div>
+  <div class="panel-bottom">
+    <div>
+      <p class="kicker">Essays and notes</p>
+      <h2 class="big"><a href="/writing">Writing</a></h2>
+      
+    </div>
+    <a class="go" href="/writing" aria-label="Open Writing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
   </div>
 </section>
-
-<section class="cols">
-  <div>
-    <h2 class="label">Practice</h2>
-    <p>Civil engineering<br>Construction management<br>Owner's representation<br>Wine buying<br>Wine education</p>
-  </div>
-  <div>
-    <h2 class="label">Credentials</h2>
-    <p>Project Management Professional <sup class="yr">2026</sup><br>Certified Construction Quality Manager <sup class="yr">2026</sup><br>Sommelier, Level 1, CMS <sup class="yr">2025</sup><br>Sommelier, Level 3, NWS <sup class="yr">2023</sup><br>OSHA 10-Hour <sup class="yr">2025</sup></p>
-  </div>
-  <div>
-    <h2 class="label">Elsewhere</h2>
-    <p>Harvest Wine Shop<br><a href="https://www.linkedin.com/in/andrew-lowry-6830ba25a" target="_blank" rel="noopener">LinkedIn</a><br><a href="/resume">Resume</a><br><a href="/subscribe">Newsletter</a></p>
+<section class="panel bg-reading t-light" id="reading" aria-label="Reading">
+  
+  <div class="panel-top"><span>Notes</span><span>02</span></div>
+  <div class="panel-bottom">
+    <div>
+      <p class="kicker">Books on the nightstand</p>
+      <h2 class="big"><a href="/reading">Reading</a></h2>
+      
+    </div>
+    <a class="go" href="/reading" aria-label="Open Reading"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
   </div>
 </section>
-
-<section>
-  <h2 class="label">Recent writing</h2>
-<ul class="rows">
-  <li><span class="what"><span class="t"><a href="/writing/the-invoice-is-the-product">The invoice is the product</a></span><span class="note">Automate the job you dread first.</span></span><span class="when"><time datetime="2026-11-20">Nov 2026</time></span></li>
-  <li><span class="what"><span class="t"><a href="/writing/write-the-decisions-down">Write the decisions down</a></span><span class="note">A shop's taste is a long list of decisions.</span></span><span class="when"><time datetime="2026-11-06">Nov 2026</time></span></li>
-  <li><span class="what"><span class="t"><a href="/writing/small-boring-done">Small, boring, done</a></span><span class="note">The systems that last are the ones nobody has to think about.</span></span><span class="when"><time datetime="2026-10-23">Oct 2026</time></span></li>
-</ul>
+<section class="panel bg-building t-light" id="building" aria-label="Building">
+  <svg class="drawing" viewBox="0 0 420 220" aria-hidden="true">
+  <path d="M30 150 H390" /><path d="M70 150 Q210 30 350 150" />
+  <path d="M105 150 V112 M140 150 V88 M175 150 V73 M210 150 V68 M245 150 V73 M280 150 V88 M315 150 V112" />
+  <path d="M62 150 V185 H78 V150 M342 150 V185 H358 V150" />
+  <path d="M70 200 H350 M70 195 V205 M350 195 V205" /><text x="210" y="214">01</text>
+  <path d="M370 68 V150 M365 68 H375 M365 150 H375" /><text x="380" y="113">02</text>
+  <path d="M210 68 V40" stroke-dasharray="3 3" /><text x="203" y="34">03</text>
+</svg>
+  <div class="panel-top"><span>Work</span><span>03</span></div>
+  <div class="panel-bottom">
+    <div>
+      <p class="kicker">The shop and the job site</p>
+      <h2 class="big"><a href="/building">Building</a></h2>
+      
+    </div>
+    <a class="go" href="/building" aria-label="Open Building"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
+  </div>
 </section>
-<section class="subscribe" aria-labelledby="sub-h-home">
-  <h2 class="label" id="sub-h-home">Newsletter</h2>
-  <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
-  <form class="js-subscribe" action="/api/subscribe" method="post">
+<section class="panel bg-buying t-light" id="buying" aria-label="Buying">
+  <svg class="drawing" viewBox="0 0 300 300" aria-hidden="true">
+  <path d="M110 40 C100 110 105 150 150 165 C195 150 200 110 190 40" />
+  <path d="M150 165 V245 M115 250 C130 244 170 244 185 250 Z" />
+  <path d="M104 95 H196" stroke-dasharray="3 3" />
+  <path d="M190 40 H240" /><text x="246" y="44">01</text>
+  <path d="M198 95 H240" /><text x="246" y="99">02</text>
+  <path d="M152 205 H240" /><text x="246" y="209">03</text>
+  <path d="M186 250 H240" /><text x="246" y="254">04</text>
+</svg>
+  <div class="panel-top"><span>Notes</span><span>04</span></div>
+  <div class="panel-bottom">
+    <div>
+      <p class="kicker">Things worth paying for</p>
+      <h2 class="big"><a href="/buying">Buying</a></h2>
+      
+    </div>
+    <a class="go" href="/buying" aria-label="Open Buying"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+<section class="panel bg-trashing t-light" id="trashing" aria-label="Trashing">
+  
+  <div class="panel-top"><span>Notes</span><span>05</span></div>
+  <div class="panel-bottom">
+    <div>
+      <p class="kicker">Things I threw out</p>
+      <h2 class="big"><a href="/trashing">Trashing</a></h2>
+      
+    </div>
+    <a class="go" href="/trashing" aria-label="Open Trashing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+<section class="panel bg-resume t-dark" id="resume" aria-label="Resume">
+  <svg class="drawing" viewBox="0 0 360 220" aria-hidden="true">
+  <path d="M40 70 H320 L300 140 Q180 200 60 140 Z" />
+  <path d="M30 110 H330" stroke-dasharray="4 4" />
+  <path d="M180 70 V176 M120 70 V160 M240 70 V160" />
+  <path d="M40 60 H320 M40 55 V65 M320 55 V65" /><text x="172" y="50">01</text>
+  <path d="M338 70 V110 M333 70 H343 M333 110 H343" /><text x="346" y="94">02</text>
+</svg>
+  <div class="panel-top"><span>About</span><span>06</span></div>
+  <div class="panel-bottom">
+    <div>
+      <p class="kicker">Engineer, officer, sommelier</p>
+      <h2 class="big"><a href="/resume">Resume</a></h2>
+      
+    </div>
+    <a class="go" href="/resume" aria-label="Open Resume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
+  </div>
+</section>
+<section class="panel bg-subscribe t-light" id="subscribe" aria-label="Newsletter">
+  
+  <div class="panel-top"><span>Newsletter</span><span>07</span></div>
+  <div class="panel-bottom">
+    <div>
+      <p class="kicker">Occasional emails</p>
+      <h2 class="big"><a href="/subscribe">Newsletter</a></h2>
+      <div class="panel-form"><form class="js-subscribe sub-form" action="/api/subscribe" method="post">
     <label for="email-home" class="hp">Email address</label>
     <input id="email-home" type="email" name="email" placeholder="Email address" autocomplete="email" required>
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <button type="submit">Subscribe</button>
   </form>
-  <p class="msg" role="status" aria-live="polite"></p>
+  <p class="msg" role="status" aria-live="polite"></p></div>
+    </div>
+    
+  </div>
 </section>
 </main>
-<footer class="site-foot">
-  <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
-  <span>Site built with AI. The words are mine. <a href="/colophon">How this was made</a></span>
-  <span><a href="/subscribe">Newsletter</a> &middot; <a href="/rss.xml">RSS</a></span>
-</footer>
-</div>
+<nav class="ticks" aria-label="Panels"></nav>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

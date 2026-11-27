@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Building · Andy Lowry</title>
 <meta name="description" content="What Andy Lowry is building: a wine shop, and heavy civil construction projects.">
 <link rel="canonical" href="https://andylowry.com/building">
@@ -10,42 +10,70 @@
 <meta property="og:description" content="What Andy Lowry is building: a wine shop, and heavy civil construction projects.">
 <meta property="og:url" content="https://andylowry.com/building">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
-<div class="wrap">
-<header class="site-head">
-  <a class="name" href="/">Andy Lowry</a>
-  <nav aria-label="Sections">
+<body class="sub">
+<header class="bar">
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <a class="bar-name" href="/">Andy Lowry</a>
+</header>
+<div class="menu" id="menu" hidden>
+  <nav class="menu-links" aria-label="Sections">
+    <a href="/">Home</a>
     <a href="/writing">Writing</a>
     <a href="/reading">Reading</a>
-    <a href="/building" aria-current="page">Building</a>
+    <a href="/building">Building</a>
     <a href="/buying">Buying</a>
     <a href="/trashing">Trashing</a>
     <a href="/resume">Resume</a>
-    <a class="sub" href="/subscribe">Subscribe</a>
+    <a href="/subscribe">Newsletter</a>
   </nav>
+  <div class="menu-cols">
+    <div>
+      <h2 class="label">About</h2>
+      <p>Andy Lowry is a civil engineer, sommelier and construction manager. He works as an owner's rep in heavy civil construction and runs Harvest Wine Shop.</p>
+    </div>
+    <div>
+      <h2 class="label">Credentials</h2>
+      <p>Project Management Professional <sup class="yr">2026</sup><br>Certified Construction Quality Manager <sup class="yr">2026</sup><br>Sommelier, Level 1, CMS <sup class="yr">2025</sup><br>Sommelier, Level 3, NWS <sup class="yr">2023</sup><br>B.S. Ocean Engineering, USNA <sup class="yr">2019</sup></p>
+    </div>
+    <div>
+      <h2 class="label">Elsewhere</h2>
+      <p><a href="https://www.linkedin.com/in/andrew-lowry-6830ba25a" target="_blank" rel="noopener">LinkedIn</a><br><a href="/subscribe">Newsletter</a><br><a href="/rss.xml">RSS</a></p>
+    </div>
+  </div>
+  <p class="menu-foot">Site built with AI. The words are mine. <a href="/colophon">How this was made</a></p>
+</div>
+<header class="hero bg-building t-light">
+  <svg class="drawing" viewBox="0 0 420 220" aria-hidden="true">
+  <path d="M30 150 H390" /><path d="M70 150 Q210 30 350 150" />
+  <path d="M105 150 V112 M140 150 V88 M175 150 V73 M210 150 V68 M245 150 V73 M280 150 V88 M315 150 V112" />
+  <path d="M62 150 V185 H78 V150 M342 150 V185 H358 V150" />
+  <path d="M70 200 H350 M70 195 V205 M350 195 V205" /><text x="210" y="214">01</text>
+  <path d="M370 68 V150 M365 68 H375 M365 150 H375" /><text x="380" y="113">02</text>
+  <path d="M210 68 V40" stroke-dasharray="3 3" /><text x="203" y="34">03</text>
+</svg>
+  <div class="panel-top"><span>The shop and the job site</span><span>03</span></div>
+  <h1 class="big">Building</h1>
 </header>
-<main>
-<h1 class="page-title">Building</h1>
+<main class="page">
 <p class="lede">The work I'm responsible for right now, at the shop and on the job site.</p>
 <ul class="rows">
   <li><span class="what"><span class="t">Harvest Wine Shop</span><span class="note">An independent wine shop I founded and run. I handle the buying, licensing, retail and marketing.</span></span><span class="when">2023-now</span></li>
   <li><span class="what"><span class="t">Heavy civil construction</span><span class="note">Owner's rep work for an international consulting firm: schedule, quality, safety, and keeping contractors and the owner pointed the same way.</span></span><span class="when">2025-now</span></li>
   <li><span class="what"><span class="t">The shop's back office</span><span class="note">Receiving, product listings, producer pages and the newsletter, set up so nobody has to retype a number.</span></span><span class="when">Ongoing</span></li>
-  <li><span class="what"><span class="t"><a href="/colophon">This website</a></span><span class="note">Built with AI. The words are mine.</span></span><span class="when">2026</span></li>
 </ul>
-<section class="subscribe" aria-labelledby="sub-h-building">
-  <h2 class="label" id="sub-h-building">Newsletter</h2>
+
+<section class="sub-block">
+  <h2 class="label">Newsletter</h2>
   <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
-  <form class="js-subscribe" action="/api/subscribe" method="post">
+  <form class="js-subscribe sub-form" action="/api/subscribe" method="post">
     <label for="email-building" class="hp">Email address</label>
     <input id="email-building" type="email" name="email" placeholder="Email address" autocomplete="email" required>
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -57,9 +85,7 @@
 <footer class="site-foot">
   <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
   <span>Site built with AI. The words are mine. <a href="/colophon">How this was made</a></span>
-  <span><a href="/subscribe">Newsletter</a> &middot; <a href="/rss.xml">RSS</a></span>
 </footer>
-</div>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

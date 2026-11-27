@@ -2,43 +2,63 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nobody wants a newsletter · Andy Lowry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Writing · Andy Lowry</title>
 <meta name="description" content="People open the emails that make them better at something.">
 <link rel="canonical" href="https://andylowry.com/writing/nobody-wants-a-newsletter">
-<meta property="og:title" content="Nobody wants a newsletter · Andy Lowry">
+<meta property="og:title" content="Writing · Andy Lowry">
 <meta property="og:description" content="People open the emails that make them better at something.">
 <meta property="og:url" content="https://andylowry.com/writing/nobody-wants-a-newsletter">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
-<body>
-<div class="wrap">
-<header class="site-head">
-  <a class="name" href="/">Andy Lowry</a>
-  <nav aria-label="Sections">
-    <a href="/writing" aria-current="page">Writing</a>
+<body class="sub">
+<header class="bar">
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <a class="bar-name" href="/">Andy Lowry</a>
+</header>
+<div class="menu" id="menu" hidden>
+  <nav class="menu-links" aria-label="Sections">
+    <a href="/">Home</a>
+    <a href="/writing">Writing</a>
     <a href="/reading">Reading</a>
     <a href="/building">Building</a>
     <a href="/buying">Buying</a>
     <a href="/trashing">Trashing</a>
     <a href="/resume">Resume</a>
-    <a class="sub" href="/subscribe">Subscribe</a>
+    <a href="/subscribe">Newsletter</a>
   </nav>
+  <div class="menu-cols">
+    <div>
+      <h2 class="label">About</h2>
+      <p>Andy Lowry is a civil engineer, sommelier and construction manager. He works as an owner's rep in heavy civil construction and runs Harvest Wine Shop.</p>
+    </div>
+    <div>
+      <h2 class="label">Credentials</h2>
+      <p>Project Management Professional <sup class="yr">2026</sup><br>Certified Construction Quality Manager <sup class="yr">2026</sup><br>Sommelier, Level 1, CMS <sup class="yr">2025</sup><br>Sommelier, Level 3, NWS <sup class="yr">2023</sup><br>B.S. Ocean Engineering, USNA <sup class="yr">2019</sup></p>
+    </div>
+    <div>
+      <h2 class="label">Elsewhere</h2>
+      <p><a href="https://www.linkedin.com/in/andrew-lowry-6830ba25a" target="_blank" rel="noopener">LinkedIn</a><br><a href="/subscribe">Newsletter</a><br><a href="/rss.xml">RSS</a></p>
+    </div>
+  </div>
+  <p class="menu-foot">Site built with AI. The words are mine. <a href="/colophon">How this was made</a></p>
+</div>
+<header class="hero bg-writing t-dark">
+  
+  <div class="panel-top"><span>Essays and notes</span><span>01</span></div>
+  <h1 class="big">Writing</h1>
 </header>
-<main>
+<main class="page">
 <article class="post">
-  <header>
-    <time datetime="2026-10-09">October 9, 2026</time>
-    <h1 class="page-title">Nobody wants a newsletter</h1>
-  </header>
+  <p class="meta"><time datetime="2026-10-09">October 9, 2026</time></p>
+  <h2 class="post-title">Nobody wants a newsletter</h2>
   <div class="prose">
 <p>Nobody wakes up wanting more email. People want to get a little better at something they already care about, like picking a bottle for Saturday or understanding why a wine tastes the way it does.</p>
 <p>One good recommendation does more than ten announcements, and an honest "skip this" earns more trust than a month of "don't miss out."</p>
@@ -46,10 +66,11 @@
   </div>
 </article>
 <p class="back"><a href="/writing">All writing</a></p>
-<section class="subscribe" aria-labelledby="sub-h-writing">
-  <h2 class="label" id="sub-h-writing">Newsletter</h2>
+
+<section class="sub-block">
+  <h2 class="label">Newsletter</h2>
   <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
-  <form class="js-subscribe" action="/api/subscribe" method="post">
+  <form class="js-subscribe sub-form" action="/api/subscribe" method="post">
     <label for="email-writing" class="hp">Email address</label>
     <input id="email-writing" type="email" name="email" placeholder="Email address" autocomplete="email" required>
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -61,9 +82,7 @@
 <footer class="site-foot">
   <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
   <span>Site built with AI. The words are mine. <a href="/colophon">How this was made</a></span>
-  <span><a href="/subscribe">Newsletter</a> &middot; <a href="/rss.xml">RSS</a></span>
 </footer>
-</div>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>
