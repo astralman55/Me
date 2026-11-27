@@ -129,6 +129,11 @@ sup.yr { font-size: .6em; color: var(--muted); vertical-align: .6em; font-varian
   transition: transform .3s; box-shadow: 0 1px 0 rgba(0,0,0,.08);
 }
 a.tile:hover { transform: translateY(-4px); }
+.tiles.physics .tile { /* positions come from the physics engine */
+  left: 0; bottom: auto; top: 0; rotate: none; translate: none; animation: none;
+  transition: filter .2s; transform-origin: center;
+}
+.tiles.physics a.tile:hover { filter: brightness(1.08); }
 @keyframes drop {
   0%   { translate: 0 -110vh; }
   72%  { translate: 0 0; }
