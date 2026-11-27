@@ -114,23 +114,46 @@ sup.yr { font-size: .6em; color: var(--muted); vertical-align: .6em; font-varian
 .statement a { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .1em; }
 .statement a:hover { color: var(--accent); }
 .hint { margin: 1.5rem 0 0; font-size: .875rem; color: var(--muted); }
-.tiles { position: absolute; inset: 0; z-index: 1; }
-.tile { position: absolute; display: block; transition: transform .3s; }
-.tile:hover { transform: scale(1.03); }
-.tile-0 { left: 6%;  top: 3%;  width: 30%; aspect-ratio: 16/9; }
-.tile-1 { right: 0;  top: 6%;  width: 30%; aspect-ratio: 3/2; }
-.tile-2 { left: 0;   top: 17%; width: 30%; aspect-ratio: 16/10; }
-.tile-3 { right: 9%; top: 21%; width: 18%; aspect-ratio: 4/3; }
-.tile-4 { left: 42%; top: 2%;  width: 12%; aspect-ratio: 1/1.25; }
-.tile-5 { left: 38%; top: 16%; width: 17%; aspect-ratio: 4/3; }
+.tiles { /* pyramid: 3 / 2 / 1, built block by block on load */
+  --w: 26vw; --h: 15vw; --g: 6px;
+  position: absolute; z-index: 1;
+  width: calc(3 * var(--w) + 2 * var(--g)); height: calc(3 * var(--h) + 2 * var(--g));
+  left: 50%; margin-left: calc((3 * var(--w) + 2 * var(--g)) / -2); top: 1.25rem;
+}
+.tiles::after { /* ground line */
+  content: ""; position: absolute; left: -8%; right: -8%; bottom: -1px; height: 1px; background: #111;
+  transform-origin: left; animation: ground .6s ease-out both .1s;
+}
+.tile {
+  position: absolute; display: block; width: var(--w); height: var(--h);
+  left: calc(var(--x) * (var(--w) + var(--g))); bottom: calc(var(--y) * (var(--h) + var(--g)));
+  animation: drop .75s cubic-bezier(.3, 0, .6, 1) both; animation-delay: var(--d);
+  transition: transform .3s;
+}
+.tile:hover { transform: translateY(-4px); }
+.tile-2 { --x: 0;   --y: 0; --d: .45s; }  /* building */
+.tile-4 { --x: 1;   --y: 0; --d: 1s; }    /* trashing */
+.tile-5 { --x: 2;   --y: 0; --d: 1.55s; } /* resume */
+.tile-1 { --x: .5;  --y: 1; --d: 2.1s; }  /* reading */
+.tile-3 { --x: 1.5; --y: 1; --d: 2.65s; } /* buying */
+.tile-0 { --x: 1;   --y: 2; --d: 3.2s; }  /* writing, capstone */
+@keyframes drop {
+  0%   { translate: 0 -110vh; }
+  72%  { translate: 0 0; }
+  84%  { translate: 0 -5%; }
+  100% { translate: 0 0; }
+}
+@keyframes ground { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @media (min-width: 900px) {
   .statement { max-width: 21ch; }
-  .tile-0 { left: 8%;  top: 6%;  width: 20%; }
-  .tile-1 { right: 6%; top: 8%;  width: 19%; }
-  .tile-2 { left: 34%; top: 14%; width: 17%; }
-  .tile-3 { right: 20%; top: 36%; width: 12%; }
-  .tile-4 { left: 58%; top: 5%;  width: 7%; }
-  .tile-5 { left: auto; top: auto; right: 4%; bottom: 10%; width: 15%; }
+  .tiles { --w: 9.5vw; --h: 6.5vw; --g: 8px; left: auto; margin-left: 0; top: auto; right: 5%; bottom: 18%; }
+}
+@media (max-width: 899px) and (max-height: 720px) {
+  .tiles { --w: 21vw; --h: 10.5vw; --g: 5px; top: .9rem; }
+  .statement { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile, .tiles::after { animation: none; }
 }
 
 /* right-edge progress ticks */
