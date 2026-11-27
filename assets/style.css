@@ -149,3 +149,12 @@ article.post h1 { font-size: 2rem; }
 }
 .site-foot a { color: var(--muted); }
 .site-foot a:hover { color: var(--fg); }
+
+/* print (resume → pdf) */
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .wrap { max-width: none; padding: 0; }
+  nav.tabs, .subscribe, .site-foot, .brand .cursor, .meta a[href="#"] { display: none; }
+  a { color: #000; }
+  ul.list li { break-inside: avoid; }
+}
