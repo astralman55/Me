@@ -108,26 +108,29 @@ sup.yr { font-size: .6em; color: var(--muted); vertical-align: .6em; font-varian
 .intro { background: #fff; color: #111; justify-content: flex-end; }
 .intro::before, .intro::after { display: none; }
 .statement {
-  position: relative; z-index: 2; margin: 0; max-width: 15ch; font-weight: 500;
-  font-size: clamp(2.6rem, 8.4vw, 6.8rem); line-height: 1; letter-spacing: -.045em;
+  position: relative; z-index: 2; margin: 0; max-width: 24ch; font-weight: 500;
+  font-size: clamp(1.75rem, 4.6vw, 4.1rem); line-height: 1.06; letter-spacing: -.035em;
 }
+.statement a { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .1em; }
+.statement a:hover { color: var(--accent); }
 .hint { margin: 1.5rem 0 0; font-size: .875rem; color: var(--muted); }
 .tiles { position: absolute; inset: 0; z-index: 1; }
 .tile { position: absolute; display: block; transition: transform .3s; }
 .tile:hover { transform: scale(1.03); }
-.tile-0 { left: 12%; top: 4%;  width: 34%; aspect-ratio: 16/9; }
-.tile-1 { right: 0;  top: 12%; width: 32%; aspect-ratio: 3/2; }
-.tile-2 { left: 0;   top: 30%; width: 38%; aspect-ratio: 16/10; }
-.tile-3 { right: 5%; top: 36%; width: 21%; aspect-ratio: 4/3; }
-.tile-4 { left: 56%; top: 1%; width: 13%; aspect-ratio: 1/1.25; }
-.tile-5 { right: 4%; bottom: 6%; width: 22%; aspect-ratio: 4/3; }
+.tile-0 { left: 6%;  top: 3%;  width: 30%; aspect-ratio: 16/9; }
+.tile-1 { right: 0;  top: 6%;  width: 30%; aspect-ratio: 3/2; }
+.tile-2 { left: 0;   top: 17%; width: 30%; aspect-ratio: 16/10; }
+.tile-3 { right: 9%; top: 21%; width: 18%; aspect-ratio: 4/3; }
+.tile-4 { left: 42%; top: 2%;  width: 12%; aspect-ratio: 1/1.25; }
+.tile-5 { left: 38%; top: 16%; width: 17%; aspect-ratio: 4/3; }
 @media (min-width: 900px) {
-  .tile-0 { left: 8%; top: 6%; width: 22%; }
-  .tile-1 { right: 6%; top: 8%; width: 20%; }
-  .tile-2 { left: 34%; top: 18%; width: 18%; }
-  .tile-3 { right: 22%; top: 34%; width: 13%; }
-  .tile-4 { left: 68%; top: 64%; width: 8%; }
-  .tile-5 { right: 4%; bottom: 10%; width: 16%; }
+  .statement { max-width: 21ch; }
+  .tile-0 { left: 8%;  top: 6%;  width: 20%; }
+  .tile-1 { right: 6%; top: 8%;  width: 19%; }
+  .tile-2 { left: 34%; top: 14%; width: 17%; }
+  .tile-3 { right: 20%; top: 36%; width: 12%; }
+  .tile-4 { left: 58%; top: 5%;  width: 7%; }
+  .tile-5 { left: auto; top: auto; right: 4%; bottom: 10%; width: 15%; }
 }
 
 /* right-edge progress ticks */
