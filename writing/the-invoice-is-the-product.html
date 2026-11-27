@@ -10,55 +10,60 @@
 <meta property="og:description" content="Automate the job you dread first.">
 <meta property="og:url" content="https://andylowry.com/writing/the-invoice-is-the-product">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <div class="wrap">
 <header class="site-head">
-  <a class="brand" href="/" aria-label="Andy Lowry, home"><span class="prompt">~/</span>andy-lowry<span class="cursor" aria-hidden="true"></span></a>
-  <nav class="tabs" aria-label="Sections">
-    <a href="/writing" aria-current="page">writing</a>
-    <a href="/reading">reading</a>
-    <a href="/building">building</a>
-    <a href="/buying">buying</a>
-    <a href="/trashing">trashing</a>
-    <a href="/resume">resume</a>
-    <a class="sub" href="/subscribe">subscribe &rarr;</a>
+  <a class="name" href="/">Andy Lowry</a>
+  <nav aria-label="Sections">
+    <a href="/writing" aria-current="page">Writing</a>
+    <a href="/reading">Reading</a>
+    <a href="/building">Building</a>
+    <a href="/buying">Buying</a>
+    <a href="/trashing">Trashing</a>
+    <a href="/resume">Resume</a>
+    <a class="sub" href="/subscribe">Subscribe</a>
   </nav>
 </header>
 <main>
 <article class="post">
   <header>
-    <h1>The invoice is the product</h1>
-    <time datetime="2026-11-20">Nov 20, 2026</time>
+    <time datetime="2026-11-20">November 20, 2026</time>
+    <h1 class="page-title">The invoice is the product</h1>
   </header>
+  <div class="prose">
 <p>Every case of wine comes in with a piece of paper: bottle count, case price, deposit, and discounts that may or may not have been applied. Nobody opens a wine shop because they like that paper.</p>
 <p>But the margin lives there. Key in one cost wrong and a good bottle turns into a loss leader, and you won't find out until the quarter closes.</p>
-<p>So the first real thing I built for the shop was invoice intake. I take a photo of the invoice, and the tool checks every line against what the bottle should cost, receives the wine into inventory, and flags anything that doesn't match. It's dull work, which is why I wanted a machine doing it.</p>
+<p>So the first thing I fixed at the shop was receiving. Every invoice gets checked line by line against what the bottle should cost before the wine goes into inventory, and anything that doesn't match gets flagged. It's dull work, which is why I wanted it off my plate.</p>
 <blockquote>Automate the job you dread first.</blockquote>
 <p>You'll get to the fun work anyway. Errors hide in the work you dread, because a tired person at 6pm is the least reliable part of any business. Hand that job to something that doesn't get tired and spend the hour on the floor, talking to someone about what they're cooking tonight.</p>
+  </div>
 </article>
-<p class="post-nav"><a href="/writing">&larr; all writing</a></p>
-<section class="subscribe" aria-labelledby="sub-h">
-  <h2 id="sub-h">Get the newsletter</h2>
+<p class="back"><a href="/writing">All writing</a></p>
+<section class="subscribe" aria-labelledby="sub-h-writing">
+  <h2 class="label" id="sub-h-writing">Newsletter</h2>
   <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
   <form class="js-subscribe" action="/api/subscribe" method="post">
     <label for="email-writing" class="hp">Email address</label>
-    <input id="email-writing" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+    <input id="email-writing" type="email" name="email" placeholder="Email address" autocomplete="email" required>
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <button type="submit">subscribe</button>
+    <button type="submit">Subscribe</button>
   </form>
   <p class="msg" role="status" aria-live="polite"></p>
 </section>
 </main>
 <footer class="site-foot">
   <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
-  <span>Site built with AI. The words are mine. <a href="/colophon">how this was made</a></span>
-  <span><a href="/rss.xml">rss</a> &middot; <a href="/subscribe">newsletter</a> &middot; plain html, no trackers</span>
+  <span>Site built with AI. The words are mine. <a href="/colophon">How this was made</a></span>
+  <span><a href="/subscribe">Newsletter</a> &middot; <a href="/rss.xml">RSS</a></span>
 </footer>
 </div>
 <script src="/assets/site.js" defer></script>

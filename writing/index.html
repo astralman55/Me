@@ -4,58 +4,60 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Writing · Andy Lowry</title>
-<meta name="description" content="Short essays on wine, retail, and building small useful tools.">
+<meta name="description" content="Short essays on wine, construction and running things.">
 <link rel="canonical" href="https://andylowry.com/writing">
 <meta property="og:title" content="Writing · Andy Lowry">
-<meta property="og:description" content="Short essays on wine, retail, and building small useful tools.">
+<meta property="og:description" content="Short essays on wine, construction and running things.">
 <meta property="og:url" content="https://andylowry.com/writing">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <div class="wrap">
 <header class="site-head">
-  <a class="brand" href="/" aria-label="Andy Lowry, home"><span class="prompt">~/</span>andy-lowry<span class="cursor" aria-hidden="true"></span></a>
-  <nav class="tabs" aria-label="Sections">
-    <a href="/writing" aria-current="page">writing</a>
-    <a href="/reading">reading</a>
-    <a href="/building">building</a>
-    <a href="/buying">buying</a>
-    <a href="/trashing">trashing</a>
-    <a href="/resume">resume</a>
-    <a class="sub" href="/subscribe">subscribe &rarr;</a>
+  <a class="name" href="/">Andy Lowry</a>
+  <nav aria-label="Sections">
+    <a href="/writing" aria-current="page">Writing</a>
+    <a href="/reading">Reading</a>
+    <a href="/building">Building</a>
+    <a href="/buying">Buying</a>
+    <a href="/trashing">Trashing</a>
+    <a href="/resume">Resume</a>
+    <a class="sub" href="/subscribe">Subscribe</a>
   </nav>
 </header>
 <main>
-<span class="label">// writing</span>
-<h1>Writing</h1>
-<p class="muted">Short pieces, mostly written to figure out what I think.</p>
-<ul class="list">
-  <li><span class="k"><time datetime="2026-11-20">2026-11-20</time></span><span class="v"><a href="/writing/the-invoice-is-the-product"><strong>The invoice is the product</strong></a><span class="note">Automate the job you dread first.</span></span></li>
-  <li><span class="k"><time datetime="2026-11-06">2026-11-06</time></span><span class="v"><a href="/writing/taste-is-a-dataset"><strong>Taste is a dataset</strong></a><span class="note">A shop's taste is a long list of decisions. Write them down.</span></span></li>
-  <li><span class="k"><time datetime="2026-10-23">2026-10-23</time></span><span class="v"><a href="/writing/small-boring-done"><strong>Small, boring, done</strong></a><span class="note">The tools that lasted are the ones I stopped thinking about.</span></span></li>
-  <li><span class="k"><time datetime="2026-10-09">2026-10-09</time></span><span class="v"><a href="/writing/nobody-wants-a-newsletter"><strong>Nobody wants a newsletter</strong></a><span class="note">People open the emails that make them better at something.</span></span></li>
+<h1 class="page-title">Writing</h1>
+<p class="lede">Short pieces, mostly written to figure out what I think.</p>
+<ul class="rows">
+  <li><span class="what"><span class="t"><a href="/writing/the-invoice-is-the-product">The invoice is the product</a></span><span class="note">Automate the job you dread first.</span></span><span class="when"><time datetime="2026-11-20">Nov 2026</time></span></li>
+  <li><span class="what"><span class="t"><a href="/writing/write-the-decisions-down">Write the decisions down</a></span><span class="note">A shop's taste is a long list of decisions.</span></span><span class="when"><time datetime="2026-11-06">Nov 2026</time></span></li>
+  <li><span class="what"><span class="t"><a href="/writing/small-boring-done">Small, boring, done</a></span><span class="note">The systems that last are the ones nobody has to think about.</span></span><span class="when"><time datetime="2026-10-23">Oct 2026</time></span></li>
+  <li><span class="what"><span class="t"><a href="/writing/nobody-wants-a-newsletter">Nobody wants a newsletter</a></span><span class="note">People open the emails that make them better at something.</span></span><span class="when"><time datetime="2026-10-09">Oct 2026</time></span></li>
 </ul>
-<section class="subscribe" aria-labelledby="sub-h">
-  <h2 id="sub-h">Get the newsletter</h2>
+<section class="subscribe" aria-labelledby="sub-h-writing">
+  <h2 class="label" id="sub-h-writing">Newsletter</h2>
   <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
   <form class="js-subscribe" action="/api/subscribe" method="post">
     <label for="email-writing" class="hp">Email address</label>
-    <input id="email-writing" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+    <input id="email-writing" type="email" name="email" placeholder="Email address" autocomplete="email" required>
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <button type="submit">subscribe</button>
+    <button type="submit">Subscribe</button>
   </form>
   <p class="msg" role="status" aria-live="polite"></p>
 </section>
 </main>
 <footer class="site-foot">
   <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
-  <span>Site built with AI. The words are mine. <a href="/colophon">how this was made</a></span>
-  <span><a href="/rss.xml">rss</a> &middot; <a href="/subscribe">newsletter</a> &middot; plain html, no trackers</span>
+  <span>Site built with AI. The words are mine. <a href="/colophon">How this was made</a></span>
+  <span><a href="/subscribe">Newsletter</a> &middot; <a href="/rss.xml">RSS</a></span>
 </footer>
 </div>
 <script src="/assets/site.js" defer></script>

@@ -10,50 +10,48 @@
 <meta property="og:description" content="Subscribe to Andy Lowry&#x27;s newsletter.">
 <meta property="og:url" content="https://andylowry.com/subscribe">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141312" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="Andy Lowry" href="/rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <div class="wrap">
 <header class="site-head">
-  <a class="brand" href="/" aria-label="Andy Lowry, home"><span class="prompt">~/</span>andy-lowry<span class="cursor" aria-hidden="true"></span></a>
-  <nav class="tabs" aria-label="Sections">
-    <a href="/writing">writing</a>
-    <a href="/reading">reading</a>
-    <a href="/building">building</a>
-    <a href="/buying">buying</a>
-    <a href="/trashing">trashing</a>
-    <a href="/resume">resume</a>
-    <a class="sub" href="/subscribe" aria-current="page">subscribe &rarr;</a>
+  <a class="name" href="/">Andy Lowry</a>
+  <nav aria-label="Sections">
+    <a href="/writing">Writing</a>
+    <a href="/reading">Reading</a>
+    <a href="/building">Building</a>
+    <a href="/buying">Buying</a>
+    <a href="/trashing">Trashing</a>
+    <a href="/resume">Resume</a>
+    <a class="sub" href="/subscribe" aria-current="page">Subscribe</a>
   </nav>
 </header>
 <main>
-<span class="label">// subscribe</span>
-<h1>The newsletter</h1>
-<p class="lede">An occasional email about what I'm drinking, building, reading and throwing away.</p>
-<pre><code>frequency   when there's something worth saying
-length      a two-minute read
-cost        free
-exit        one click, any time</code></pre>
-<section class="subscribe" aria-labelledby="sub-h">
-  <h2 id="sub-h">Get the newsletter</h2>
+<h1 class="page-title">Newsletter</h1>
+<p class="lede">An occasional email about what I'm drinking, building, reading and throwing away. It's free, it takes about two minutes to read, and I only send one when there's something worth saying.</p>
+<section class="subscribe" aria-labelledby="sub-h-subscribe">
+  <h2 class="label" id="sub-h-subscribe">Newsletter</h2>
   <p>Occasional emails about what I'm writing, reading, building, buying and throwing away. You can unsubscribe with one click.</p>
   <form class="js-subscribe" action="/api/subscribe" method="post">
     <label for="email-subscribe" class="hp">Email address</label>
-    <input id="email-subscribe" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+    <input id="email-subscribe" type="email" name="email" placeholder="Email address" autocomplete="email" required>
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <button type="submit">subscribe</button>
+    <button type="submit">Subscribe</button>
   </form>
   <p class="msg" role="status" aria-live="polite"></p>
 </section>
 </main>
 <footer class="site-foot">
   <span>&copy; <span class="js-year">2026</span> Andy Lowry</span>
-  <span>Site built with AI. The words are mine. <a href="/colophon">how this was made</a></span>
-  <span><a href="/rss.xml">rss</a> &middot; <a href="/subscribe">newsletter</a> &middot; plain html, no trackers</span>
+  <span>Site built with AI. The words are mine. <a href="/colophon">How this was made</a></span>
+  <span><a href="/subscribe">Newsletter</a> &middot; <a href="/rss.xml">RSS</a></span>
 </footer>
 </div>
 <script src="/assets/site.js" defer></script>
